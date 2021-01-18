@@ -68,7 +68,7 @@ static NSString *rootViewControllerIdentifier = @"SMRootViewControllerCell";
     [super viewDidLoad];
     //Notification
     //UI
-    self.title = @"已阅";
+    self.title = NSLocalizedString(@"HomeTile", nil);
     self.view.backgroundColor = [UIColor whiteColor];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:rootViewControllerIdentifier];
     [self.view addSubview:self.tableView];
@@ -162,7 +162,7 @@ static NSString *rootViewControllerIdentifier = @"SMRootViewControllerCell";
         self.tableView.tableHeaderView = self.tbHeaderView;
         //显示抓取状态
         self.fetchingCount += 1;
-        self.tbHeaderLabel.text = [NSString stringWithFormat:@"正在获取%@...(%lu/%lu)",feedModel.title,(unsigned long)self.fetchingCount,(unsigned long)self.feeds.count];
+        self.tbHeaderLabel.text = [NSString stringWithFormat:@"%@%@...(%lu/%lu)",NSLocalizedString(@"Fetching now", nil),feedModel.title,(unsigned long)self.fetchingCount,(unsigned long)self.feeds.count];
         feedModel.isSync = YES;
         [self.tableView reloadData];
     }];
@@ -244,13 +244,13 @@ static NSString *rootViewControllerIdentifier = @"SMRootViewControllerCell";
 }
 - (NSString *)tableView:(UITableView *)tableView
 titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return @"取消";
+    return NSLocalizedString(@"Cancel", nil);
 }
 
 #pragma mark - STMURLCache Delegate
 - (void)preloadDidFinishLoad:(UIWebView *)webView remain:(NSUInteger)remain {
     self.tableView.tableHeaderView = self.tbHeaderView;
-    self.tbHeaderLabel.text = [NSString stringWithFormat:@"缓存图片...(%lu/%lu)",(unsigned long)(self.needCacheCount - remain),(unsigned long)self.needCacheCount];
+    self.tbHeaderLabel.text = [NSString stringWithFormat:@"%@...(%lu/%lu)",NSLocalizedString(@"Cache Image", nil),(unsigned long)(self.needCacheCount - remain),(unsigned long)self.needCacheCount];
     
     if (remain == 0) {
         [self preloadDidAllDone];
@@ -312,9 +312,9 @@ titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
         [header.arrowView setImage:[UIImage imageNamed:@""]];
         header.stateLabel.font = [SMStyle fontSmall];
         header.stateLabel.textColor = [SMStyle colorPaperGray];
-        [header setTitle:@"下拉更新数据" forState:MJRefreshStateIdle];
-        [header setTitle:@"松开立刻更新" forState:MJRefreshStatePulling];
-        [header setTitle:@"更新数据..." forState:MJRefreshStateRefreshing];
+        [header setTitle:NSLocalizedString(@"Drop down to update data", nil) forState:MJRefreshStateIdle];
+        [header setTitle:NSLocalizedString(@"Release to update immediately", nil) forState:MJRefreshStatePulling];
+        [header setTitle:[NSString stringWithFormat:@"%@...",NSLocalizedString(@"Updating data", nil)] forState:MJRefreshStateRefreshing];
         
     }
     return _tableView;
@@ -334,7 +334,7 @@ titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (SMLagButton *)stackBt {
     if (!_stackBt) {
-        _stackBt = [[SMLagButton alloc] initWithStr:@"堆栈" size:16 backgroundColor:[UIColor blackColor]];
+        _stackBt = [[SMLagButton alloc] initWithStr:NSLocalizedString(@"Stack", nil) size:16 backgroundColor:[UIColor blackColor]];
         [[_stackBt click] subscribeNext:^(id x) {
             SMStackViewController *vc = [[SMStackViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
@@ -344,7 +344,7 @@ titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 - (SMLagButton *)clsCallBt {
     if (!_clsCallBt) {
-        _clsCallBt = [[SMLagButton alloc] initWithStr:@"频次" size:16 backgroundColor:[UIColor blackColor]];
+        _clsCallBt = [[SMLagButton alloc] initWithStr:NSLocalizedString(@"Frequency", nil) size:16 backgroundColor:[UIColor blackColor]];
         [[_clsCallBt click] subscribeNext:^(id x) {
             SMClsCallViewController *vc = [[SMClsCallViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];

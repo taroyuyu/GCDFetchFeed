@@ -56,20 +56,20 @@
     self.title = self.feedItemModel.title;
     //Html转Native
     NSError *err = nil;
-    NSString *feedString = [NSString stringWithFormat:@"%@<p><a href=\"%@\">阅读原文</a></p>",self.feedItemModel.des,self.feedItemModel.link];
+    NSString *feedString = [NSString stringWithFormat:@"%@<p><a href=\"%@\">%@</a></p>",self.feedItemModel.des,self.feedItemModel.link,NSLocalizedString(@"Read the original", nil)];
     NSString *styleString = [NSString stringWithContentsOfFile:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"css.html"] encoding:NSUTF8StringEncoding error:&err];
     NSString *articleString = [NSString stringWithFormat:@"%@%@",styleString,feedString];
 
     [self.wbView loadHTMLString:articleString baseURL:nil];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"分享" style:UIBarButtonItemStylePlain target:self action:@selector(share)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Share", nil) style:UIBarButtonItemStylePlain target:self action:@selector(share)];
     
     //更多功能
     self.alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-    [self.alertController addAction:[UIAlertAction actionWithTitle:@"浏览器打开" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+    [self.alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Open In Browser", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
         [[UIApplication sharedApplication] openURL:[self.lastActionLink absoluteURL]];
     }]];
-    [self.alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+    [self.alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
         
     }]];
     

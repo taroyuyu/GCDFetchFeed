@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  GCDFetchFeed
+
+  Created by LINGYU on 2021/1/18.
+  Copyright © 2021 Starming. All rights reserved.
+*/
+
+"HomeTile" = "RSS Reader";
+"ReadAll" = "ReadAll";
+"Share" = "Share";
+"Cancel" = "Cancel";
+"Read the original" = "Read the original";
+"Open In Browser" = "Open In Browser";
+"List" = "List";
+"Fetching" = "Fetching";
+"Drop down to update data" = "Drop down to update data";
+"Release to update immediately" = "Release to update immediately";
+"Updating data" = "Updating data";
+"Pull up to fetch more" = "Pull up to fetch more";
+"Fetching now" = "Fetching now";
+"Have fetched" = "Have fetched";
+"Cache Image" = "Cache Image";
+"Stack" = "Stack";
+"Frequency" = "Frequency";

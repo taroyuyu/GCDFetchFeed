@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  GCDFetchFeed
+
+  Created by LINGYU on 2021/1/18.
+  Copyright © 2021 Starming. All rights reserved.
+*/
+"HomeTile" = "RSS閱讀器";
+"ReadAll" = "全部已讀";
+"Share" = "分享";
+"Cancel" = "取消";
+"Read the original" = "閱讀原文";
+"Open In Browser" = "瀏覽器打開";
+"List" = "列表";
+"Fetching" = "正在獲取";
+"Drop down to update data" = "下拉更新數據";
+"Release to update immediately" = "鬆開立刻更新";
+"Updating data" = "更新數據";
+"Pull up to fetch more" = "上拉讀取更多";
+"Fetching now" = "正在讀取";
+"Have fetched" = "已讀取完畢";
+"Cache Image" = "緩存圖片";
+"Stack" = "堆棧";
+"Frequency" = "頻次";
