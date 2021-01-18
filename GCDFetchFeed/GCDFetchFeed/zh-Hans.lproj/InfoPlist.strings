@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  GCDFetchFeed
+
+  Created by LINGYU on 2021/1/18.
+  Copyright © 2021 Starming. All rights reserved.
+*/
+CFBundleDisplayName = "RSS阅读器";

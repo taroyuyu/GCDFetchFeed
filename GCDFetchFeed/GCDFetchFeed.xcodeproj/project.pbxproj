@@ -65,6 +65,7 @@
 		3EE311701C4E212700103FA3 /* SMRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE3116F1C4E212700103FA3 /* SMRootViewController.m */; };
 		3EE311751C4E303600103FA3 /* SMFeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE311741C4E303600103FA3 /* SMFeedModel.m */; };
 		8F3DCFAC671E00110311BDBE /* Pods_GCDFetchFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3796ACD85E2DA28F1711CF41 /* Pods_GCDFetchFeed.framework */; };
+		94C61ABD25B575B6003EBBA9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94C61ABF25B575B6003EBBA9 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,7 +191,7 @@
 		3EC82B711C72E4BC0057C6E5 /* SMArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMArticleViewController.h; sourceTree = "<group>"; };
 		3EC82B721C72E4BC0057C6E5 /* SMArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMArticleViewController.m; sourceTree = "<group>"; };
 		3EC82B741C7326D90057C6E5 /* css.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = css.html; sourceTree = "<group>"; };
-		3EE311381C4E1F0800103FA3 /* GCDFetchFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCDFetchFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EE311381C4E1F0800103FA3 /* RSS Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RSS Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE3113C1C4E1F0800103FA3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3EE3113E1C4E1F0800103FA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3EE3113F1C4E1F0800103FA3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -211,6 +212,11 @@
 		941E59A425B5739F005778E5 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		941E59A525B573A3005778E5 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		941E59A625B573AF005778E5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		94C61ABE25B575B6003EBBA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		94C61AC325B57612003EBBA9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		94C61AC425B57654003EBBA9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		94C61AC525B57655003EBBA9 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		94C61AC625B57658003EBBA9 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BB29081F4A19D8EFBD4887AF /* Pods-GCDFetchFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCDFetchFeed.release.xcconfig"; path = "Pods/Target Support Files/Pods-GCDFetchFeed/Pods-GCDFetchFeed.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -530,7 +536,7 @@
 		3EE311391C4E1F0800103FA3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3EE311381C4E1F0800103FA3 /* GCDFetchFeed.app */,
+				3EE311381C4E1F0800103FA3 /* RSS Reader.app */,
 				3EE311511C4E1F0800103FA3 /* GCDFetchFeedTests.xctest */,
 				3EE3115C1C4E1F0800103FA3 /* GCDFetchFeedUITests.xctest */,
 			);
@@ -549,6 +555,7 @@
 				3EE311471C4E1F0800103FA3 /* Assets.xcassets */,
 				3EE311491C4E1F0800103FA3 /* LaunchScreen.storyboard */,
 				3EE3114C1C4E1F0800103FA3 /* Info.plist */,
+				94C61ABF25B575B6003EBBA9 /* InfoPlist.strings */,
 				3EE3113B1C4E1F0800103FA3 /* Supporting Files */,
 			);
 			path = GCDFetchFeed;
@@ -636,7 +643,7 @@
 			);
 			name = GCDFetchFeed;
 			productName = GCDFetchFeed;
-			productReference = 3EE311381C4E1F0800103FA3 /* GCDFetchFeed.app */;
+			productReference = 3EE311381C4E1F0800103FA3 /* RSS Reader.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3EE311501C4E1F0800103FA3 /* GCDFetchFeedTests */ = {
@@ -729,6 +736,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EE3114B1C4E1F0800103FA3 /* LaunchScreen.storyboard in Resources */,
+				94C61ABD25B575B6003EBBA9 /* InfoPlist.strings in Resources */,
 				3EE311481C4E1F0800103FA3 /* Assets.xcassets in Resources */,
 				3EC82B751C7326D90057C6E5 /* css.html in Resources */,
 			);
@@ -913,6 +921,18 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		94C61ABF25B575B6003EBBA9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94C61ABE25B575B6003EBBA9 /* en */,
+				94C61AC325B57612003EBBA9 /* zh-Hant */,
+				94C61AC425B57654003EBBA9 /* zh-Hans */,
+				94C61AC525B57655003EBBA9 /* zh-HK */,
+				94C61AC625B57658003EBBA9 /* ja */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1006,7 +1026,7 @@
 				INFOPLIST_FILE = GCDFetchFeed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.GCDFetchFeed;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "RSS Reader";
 			};
 			name = Debug;
 		};
@@ -1020,7 +1040,7 @@
 				INFOPLIST_FILE = GCDFetchFeed/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.starming.GCDFetchFeed;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "RSS Reader";
 			};
 			name = Release;
 		};
