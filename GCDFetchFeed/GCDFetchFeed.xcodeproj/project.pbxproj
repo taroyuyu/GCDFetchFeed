@@ -748,7 +748,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-GCDFetchFeed/Pods-GCDFetchFeed-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-GCDFetchFeed/Pods-GCDFetchFeed-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/DTCoreText/DTCoreText.framework",
 				"${BUILT_PRODUCTS_DIR}/DTFoundation/DTFoundation.framework",
@@ -777,7 +777,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GCDFetchFeed/Pods-GCDFetchFeed-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GCDFetchFeed/Pods-GCDFetchFeed-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F53889DF393E4DEE898D14BE /* [CP] Check Pods Manifest.lock */ = {

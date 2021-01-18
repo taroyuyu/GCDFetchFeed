@@ -45,8 +45,7 @@
             dispatch_group_enter(group);
             SMFeedModel *feedModel = modelArray[i];
             feedModel.isSync = NO;
-            
-            [self GET:feedModel.feedUrl parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+            [self GET:feedModel.feedUrl parameters:nil headers:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
                 //                    NSString *xmlString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
                 //                    NSLog(@"Data: %@", xmlString);
                 //                    NSLog(@"%@",feedModel);
