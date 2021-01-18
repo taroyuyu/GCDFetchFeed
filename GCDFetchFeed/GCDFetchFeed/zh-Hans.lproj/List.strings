@@ -1,24 +1,16 @@
 /* 
-  Localizable.strings
+  List.strings
   GCDFetchFeed
 
   Created by LINGYU on 2021/1/18.
   Copyright © 2021 Starming. All rights reserved.
 */
-"HomeTile" = "RSS阅读器";
-"ReadAll" = "全部已读";
-"Share" = "分享";
-"Cancel" = "取消";
-"Read the original" = "阅读原文";
-"Open In Browser" = "浏览器打开";
 "List" = "列表";
 "Fetching" = "正在获取";
 "Drop down to update data" = "下拉更新数据";
 "Release to update immediately" = "松开立刻更新";
 "Updating data" = "更新数据";
+"ReadAll" = "全部已读";
 "Pull up to fetch more" = "上拉读取更多";
 "Fetching now" = "正在读取";
 "Have fetched" = "已读取完毕";
-"Cache Image" = "缓存图片";
-"Stack" = "堆栈";
-"Frequency" = "频次";

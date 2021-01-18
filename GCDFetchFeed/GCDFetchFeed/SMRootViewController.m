@@ -68,7 +68,7 @@ static NSString *rootViewControllerIdentifier = @"SMRootViewControllerCell";
     [super viewDidLoad];
     //Notification
     //UI
-    self.title = NSLocalizedString(@"HomeTile", nil);
+    self.title = NSLocalizedStringFromTable(@"HomeTile",@"Root", nil);
     self.view.backgroundColor = [UIColor whiteColor];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:rootViewControllerIdentifier];
     [self.view addSubview:self.tableView];
@@ -162,7 +162,7 @@ static NSString *rootViewControllerIdentifier = @"SMRootViewControllerCell";
         self.tableView.tableHeaderView = self.tbHeaderView;
         //显示抓取状态
         self.fetchingCount += 1;
-        self.tbHeaderLabel.text = [NSString stringWithFormat:@"%@%@...(%lu/%lu)",NSLocalizedString(@"Fetching now", nil),feedModel.title,(unsigned long)self.fetchingCount,(unsigned long)self.feeds.count];
+        self.tbHeaderLabel.text = [NSString stringWithFormat:@"%@%@...(%lu/%lu)",NSLocalizedStringFromTable(@"Fetching now",@"Root", nil),feedModel.title,(unsigned long)self.fetchingCount,(unsigned long)self.feeds.count];
         feedModel.isSync = YES;
         [self.tableView reloadData];
     }];
@@ -250,7 +250,7 @@ titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
 #pragma mark - STMURLCache Delegate
 - (void)preloadDidFinishLoad:(UIWebView *)webView remain:(NSUInteger)remain {
     self.tableView.tableHeaderView = self.tbHeaderView;
-    self.tbHeaderLabel.text = [NSString stringWithFormat:@"%@...(%lu/%lu)",NSLocalizedString(@"Cache Image", nil),(unsigned long)(self.needCacheCount - remain),(unsigned long)self.needCacheCount];
+    self.tbHeaderLabel.text = [NSString stringWithFormat:@"%@...(%lu/%lu)",NSLocalizedStringFromTable(@"Cache Image",@"Root", nil),(unsigned long)(self.needCacheCount - remain),(unsigned long)self.needCacheCount];
     
     if (remain == 0) {
         [self preloadDidAllDone];
@@ -312,9 +312,9 @@ titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
         [header.arrowView setImage:[UIImage imageNamed:@""]];
         header.stateLabel.font = [SMStyle fontSmall];
         header.stateLabel.textColor = [SMStyle colorPaperGray];
-        [header setTitle:NSLocalizedString(@"Drop down to update data", nil) forState:MJRefreshStateIdle];
-        [header setTitle:NSLocalizedString(@"Release to update immediately", nil) forState:MJRefreshStatePulling];
-        [header setTitle:[NSString stringWithFormat:@"%@...",NSLocalizedString(@"Updating data", nil)] forState:MJRefreshStateRefreshing];
+        [header setTitle:NSLocalizedStringFromTable(@"Drop down to update data",@"Root", nil) forState:MJRefreshStateIdle];
+        [header setTitle:NSLocalizedStringFromTable(@"Release to update immediately",@"Root", nil) forState:MJRefreshStatePulling];
+        [header setTitle:[NSString stringWithFormat:@"%@...",NSLocalizedStringFromTable(@"Updating data",@"Root", nil)] forState:MJRefreshStateRefreshing];
         
     }
     return _tableView;
@@ -334,7 +334,7 @@ titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (SMLagButton *)stackBt {
     if (!_stackBt) {
-        _stackBt = [[SMLagButton alloc] initWithStr:NSLocalizedString(@"Stack", nil) size:16 backgroundColor:[UIColor blackColor]];
+        _stackBt = [[SMLagButton alloc] initWithStr:NSLocalizedStringFromTable(@"Stack",@"Root", nil) size:16 backgroundColor:[UIColor blackColor]];
         [[_stackBt click] subscribeNext:^(id x) {
             SMStackViewController *vc = [[SMStackViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
@@ -344,7 +344,7 @@ titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 - (SMLagButton *)clsCallBt {
     if (!_clsCallBt) {
-        _clsCallBt = [[SMLagButton alloc] initWithStr:NSLocalizedString(@"Frequency", nil) size:16 backgroundColor:[UIColor blackColor]];
+        _clsCallBt = [[SMLagButton alloc] initWithStr:NSLocalizedStringFromTable(@"Frequency",@"Root", nil) size:16 backgroundColor:[UIColor blackColor]];
         [[_clsCallBt click] subscribeNext:^(id x) {
             SMClsCallViewController *vc = [[SMClsCallViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];

@@ -74,7 +74,7 @@ static NSString *feedListViewControllerCellIdentifier = @"SMFeedListViewControll
     
     //列表类型不同的处理
     if (self.feedModel.fid == 0) {
-        self.title = NSLocalizedString(@"List", nil);
+        self.title = NSLocalizedStringFromTable(@"List",@"List", nil);
         //下拉刷新
         @weakify(self);
         self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
@@ -105,7 +105,7 @@ static NSString *feedListViewControllerCellIdentifier = @"SMFeedListViewControll
                 self.tableView.tableHeaderView = self.tbHeaderView;
                 //显示抓取状态
                 self.fetchingCount += 1;
-                self.tbHeaderLabel.text = [NSString stringWithFormat:@"%@%@...(%lu/%lu)",NSLocalizedString(@"Fetching", nil),feedModel.title,(unsigned long)self.fetchingCount,(unsigned long)self.feeds.count];
+                self.tbHeaderLabel.text = [NSString stringWithFormat:@"%@%@...(%lu/%lu)",NSLocalizedStringFromTable(@"Fetching",@"List", nil),feedModel.title,(unsigned long)self.fetchingCount,(unsigned long)self.feeds.count];
             }];
         }];
         MJRefreshNormalHeader *header = (MJRefreshNormalHeader *)_tableView.mj_header;
@@ -113,12 +113,12 @@ static NSString *feedListViewControllerCellIdentifier = @"SMFeedListViewControll
         [header.arrowView setImage:[UIImage imageNamed:@""]];
         header.stateLabel.font = [SMStyle fontSmall];
         header.stateLabel.textColor = [SMStyle colorPaperGray];
-        [header setTitle:NSLocalizedString(@"Drop down to update data", nil) forState:MJRefreshStateIdle];
-        [header setTitle:NSLocalizedString(@"Release to update immediately", nil) forState:MJRefreshStatePulling];
-        [header setTitle:[NSString stringWithFormat:@"%@...",NSLocalizedString(@"Updating data", nil)] forState:MJRefreshStateRefreshing];
+        [header setTitle:NSLocalizedStringFromTable(@"Drop down to update data",@"List", nil) forState:MJRefreshStateIdle];
+        [header setTitle:NSLocalizedStringFromTable(@"Release to update immediately",@"List", nil) forState:MJRefreshStatePulling];
+        [header setTitle:[NSString stringWithFormat:@"%@...",NSLocalizedStringFromTable(@"Updating data",@"List", nil)] forState:MJRefreshStateRefreshing];
     } else {
         self.title = self.feedModel.title;
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"ReadAll", nil) style:UIBarButtonItemStylePlain target:self action:@selector(markAllAsRead)];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedStringFromTable(@"ReadAll",@"List", nil) style:UIBarButtonItemStylePlain target:self action:@selector(markAllAsRead)];
     }
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:feedListViewControllerCellIdentifier];
@@ -295,9 +295,9 @@ static NSString *feedListViewControllerCellIdentifier = @"SMFeedListViewControll
         MJRefreshAutoNormalFooter *footer = (MJRefreshAutoNormalFooter *)_tableView.mj_footer;
         footer.stateLabel.font = [SMStyle fontSmall];
         footer.stateLabel.textColor = [SMStyle colorPaperGray];
-        [footer setTitle:NSLocalizedString(@"Pull up to fetch more", nil) forState:MJRefreshStateIdle];
-        [footer setTitle:[NSString stringWithFormat:@"%@...",NSLocalizedString(@"Fetching now", nil)] forState:MJRefreshStateRefreshing];
-        [footer setTitle:NSLocalizedString(@"Have fetched", nil) forState:MJRefreshStateNoMoreData];
+        [footer setTitle:NSLocalizedStringFromTable(@"Pull up to fetch more",@"List", nil) forState:MJRefreshStateIdle];
+        [footer setTitle:[NSString stringWithFormat:@"%@...",NSLocalizedStringFromTable(@"Fetching now",@"List", nil)] forState:MJRefreshStateRefreshing];
+        [footer setTitle:NSLocalizedStringFromTable(@"Have fetched",@"List", nil) forState:MJRefreshStateNoMoreData];
         
     }
     return _tableView;

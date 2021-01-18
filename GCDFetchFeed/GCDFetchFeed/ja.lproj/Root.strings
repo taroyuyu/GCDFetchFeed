@@ -1,0 +1,15 @@
+/* 
+  Root.strings
+  GCDFetchFeed
+
+  Created by LINGYU on 2021/1/18.
+  Copyright © 2021 Starming. All rights reserved.
+*/
+"HomeTile" = "RSSリーダー";
+"Fetching now" = "今すぐフェッチ";
+"Cache Image" = "缓存図片";
+"Drop down to update data" = "ドロップダウンしてデータを更新します";
+"Release to update immediately" = "リリースしてすぐに更新";
+"Updating data" = "データの更新";
+"Stack" = "スタック";
+"Frequency" = "タイムズ";
